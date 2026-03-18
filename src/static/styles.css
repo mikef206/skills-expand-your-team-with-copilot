@@ -190,6 +190,75 @@ section h3 {
   justify-content: center;
 }
 
+/* Social share buttons */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+.share-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-right: 2px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.share-btn:hover {
+  transform: scale(1.15);
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.share-twitter:hover {
+  background-color: #e7f3ff;
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+}
+
+.share-whatsapp:hover {
+  background-color: #e9fbe9;
+  border-color: #25d366;
+  color: #25d366;
+}
+
+.share-copy:hover {
+  background-color: #f3e5ff;
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+}
+
+/* Highlighted activity (when arriving from a shared link) */
+.activity-card.highlighted {
+  outline: 3px solid var(--secondary);
+  box-shadow: 0 0 16px rgba(255, 111, 0, 0.35);
+  animation: highlight-pulse 1s ease-in-out 2;
+}
+
+@keyframes highlight-pulse {
+  0%, 100% { box-shadow: 0 0 16px rgba(255, 111, 0, 0.35); }
+  50% { box-shadow: 0 0 28px rgba(255, 111, 0, 0.65); }
+}
+
 /* Activity Tag */
 .activity-tag {
   position: absolute;
